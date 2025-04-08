@@ -1,393 +1,396 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8"> 
-  <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>InstruNET: Convolutional-Based Model for Instrument Identification in Raw Audio Signals</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="InstruNET: Convolutional-Based Model for Instrument Identification in Raw Audio Signals"
+    />
+    <meta
+      name="keywords"
+      content="Instrument Identification, Audio Classification, Convolutional Neural Networks"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      InstruNET: Convolutional-Based Model for Instrument Identification in Raw
+      Audio Signals
+    </title>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+    <link rel="stylesheet" href="./static/css/bulma.min.css" />
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <link rel="stylesheet" href="./static/css/index.css" />
+    <link rel="icon" href="./static/images/favicon.svg" />
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
-</head>
-<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-widescreen">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">
+                InstruNET: Convolutional-Based Model for Instrument
+                Identification in Raw Audio Signals
+              </h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <a href="https://www.linkedin.com/in/daphne-baron-773a82241/"
+                    >Daphne Baron</a
+                  >,
+                </span>
+                <span class="author-block">
+                  <a href="https://www.linkedin.com/in/amsalgilani"
+                    >Amsal Gilani</a
+                  >,
+                </span>
+                <span class="author-block">
+                  <a href="https://www.linkedin.com/in/lee-hanhee/"
+                    >Hanhee Lee</a
+                  >
+                </span>
+              </div>
 
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">University of Toronto</span>
+              </div>
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">InstruNET: Convolutional-Based Model for Instrument Identification in Raw Audio Signals</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://keunhong.com">Daphne Baron</a>,
-            <span class="author-block">
-              <a href="https://utkarshsinha.com">Amsal Gilani</a>,
-            <span class="author-block">
-              <a href="https://www.linkedin.com/in/lee-hanhee/">Hanhee Lee</a>
-            </span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">University of Toronto</span>
-          </div>
-
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="InstruNET_Paper.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- PDF Link. -->
+                  <span class="link-block">
+                    <a
+                      href="InstruNET_Paper.pdf"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
                   </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <!-- <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
+                  <!-- Presentation Link. -->
+                  <span class="link-block">
+                    <a
+                      href="InstruNET_Presentation.pdf"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Presentation</span>
+                    </a>
                   </span>
-                  <span>arXiv</span>
-                </a>
-              </span> -->
-              <!-- Video Link.
-              <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
+                  <!-- Code Link. -->
+                  <span class="link-block">
+                    <a
+                      href="https://github.com/lee-hanhee/instru-net"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
                   </span>
-                  <span>Video</span>
-                </a>
-              </span> -->
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/lee-hanhee/instru-net"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
+                  <!-- Dataset Link. -->
+                  <span class="link-block">
+                    <a
+                      href="http://www.slakh.com/"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="far fa-images"></i>
+                      </span>
+                      <span>Data</span>
+                    </a>
                   </span>
-                  <span>Code</span>
-                  </a>
-              </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="http://www.slakh.com/"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
+                </div>
+              </div>
             </div>
-
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
-    </div>
-  </div>
-</section>
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            In this paper, we present InstruNET, a convolutional neural network (CNN) designed for
-          multi-label instrument classification. Originally, our objective was to develop an end-
-          to-end pipeline that could take a raw, mixed audio track and generate sheet music for
-          each individual instrument. To address this separation task, we experimented with Non-
-          Negative Matrix Factorization (NMF) and a custom Spectrogram U-Net to reconstruct
-          individual spectrograms from the mixed .wav file. However, due to limitations such as poor
-          signal reconstruction, high model complexity, and constrained computational resources,
-          we redefined our project scope to focus on the more foundational problem of detecting
-          instrument presence within mixed audio files. 
-          </p>
-          <p>
-            Under this new scope, we curated a high-
-          quality dataset from the BabySlakh dataset by extracting metadata, isolating stems, and
-          organizing them into folders grouped by instrument class. InstruNET was then trained on Mel
-          spectrograms of this refined dataset to perform multi-label classification across 14 classes.
-          Our model significantly outperformed different approaches, including YAMNet (72.1%)
-          and a shallow feed-forward network (58.9%), achieving an accuracy of 82.1%. These
-          results show the effectiveness of convolutional architectures for instrument identification in
-          mixed-instrument music files and lay the groundwork for future work in source separation
-          and transcription
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Paper video. -->
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <!-- <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div> -->
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <!-- <div class="column">
-        <h2 class="title is-3">Matting</h2>
+    <section class="section">
+      <div class="container is-max-widescreen">
+        <!-- Abstract. -->
         <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div> -->
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <!-- <h2 class="title is-3">Animation</h2> -->
-
-        <!-- Interpolating. -->
-        <!-- <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
+          <div class="column is-full">
+            <h2 class="title is-3 section-title">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                In this paper, we present InstruNET, a convolutional neural
+                network (CNN) designed for multi-label instrument
+                classification. Originally, our objective was to develop an end-
+                to-end pipeline that could take a raw, mixed audio track and
+                generate sheet music for each individual instrument. To address
+                this separation task, we experimented with Non- Negative Matrix
+                Factorization (NMF) and a custom Spectrogram U-Net to
+                reconstruct individual spectrograms from the mixed .wav file.
+                However, due to limitations such as poor signal reconstruction,
+                high model complexity, and constrained computational resources,
+                we redefined our project scope to focus on the more foundational
+                problem of detecting instrument presence within mixed audio
+                files.
+              </p>
+              <p>
+                Under this new scope, we curated a high- quality dataset from
+                the BabySlakh dataset by extracting metadata, isolating stems,
+                and organizing them into folders grouped by instrument class.
+                InstruNET was then trained on Mel spectrograms of this refined
+                dataset to perform multi-label classification across 14 classes.
+                Our model significantly outperformed different approaches,
+                including YAMNet (72.1%) and a shallow feed-forward network
+                (58.9%), achieving an accuracy of 82.1%. These results show the
+                effectiveness of convolutional architectures for instrument
+                identification in mixed-instrument music files and lay the
+                groundwork for future work in source separation and
+                transcription
+              </p>
             </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
           </div>
         </div>
-        <br/> -->
-        <!--/ Interpolating. -->
+        <!--/ Abstract. -->
 
-        <!-- Re-rendering. -->
-        <!-- <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
+        <!-- Project Figures -->
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <h2 class="title is-3 section-title">Motivation</h2>
+            <div class="columns is-centered">
+              <div class="column content">
+                <img
+                  src="./static/images/Motivation.png"
+                  alt="Project Motivation"
+                  class="center-image"
+                />
+                <div class="content has-text-justified">
+                  <p>
+                    The motivation behind InstruNET is the lack of an efficient
+                    pipeline that can generate individual sheet music for
+                    multiple instruments directly from mixed raw audio. While
+                    several systems can generate sheet music from isolated
+                    instrument tracks, few can handle the challenge of
+                    instrument identification and separation from unprocessed
+                    music. InstruNET aims to bridge this gap, starting with a
+                    focus on multi-label instrument classification from mixed
+                    audio, laying the groundwork for future separation and
+                    transcription tasks.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div> -->
-        <!--/ Re-rendering. -->
 
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <h2 class="title is-3 section-title">Dataset Preparation</h2>
+            <div class="columns is-centered">
+              <div class="column content">
+                <img
+                  src="./static/images/Spectrogram.png"
+                  alt="Dataset Preparation and Spectrogram Generation"
+                  class="center-image"
+                />
+                <div class="content has-text-justified">
+                  <p>
+                    Using the BabySlakh dataset, we restructured metadata and
+                    audio files to group stems by instrument class. We focused
+                    on five dominant instruments—guitar, strings, piano, bass,
+                    and drums—and excluded rare or sparse classes to improve
+                    class balance. Each audio input was then converted to a
+                    spectrogram for training, enabling the model to learn from
+                    both time and frequency domain patterns.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <h2 class="title is-3 section-title">Model Architecture</h2>
+            <div class="columns is-centered">
+              <div class="column content">
+                <img
+                  src="./static/images/Architecture.png"
+                  alt="InstruNET Model Architecture"
+                  class="center-image"
+                />
+                <div class="content has-text-justified">
+                  <p>
+                    InstruNET uses a convolutional neural network with three
+                    convolutional layers (32, 64, 128 channels), followed by
+                    batch normalization, ReLU activations, and max pooling. The
+                    final layers include adaptive average pooling and two fully
+                    connected layers with dropout. This structure allows the
+                    model to capture hierarchical patterns in spectrograms,
+                    culminating in multi-label predictions across 14 instrument
+                    classes using binary cross-entropy loss and a sigmoid
+                    activation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/ Project Figures -->
+
+        <!-- Results Section -->
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <h2 class="title is-3 section-title">Results</h2>
+            <div class="columns is-centered">
+              <div class="column content">
+                <div class="content has-text-justified">
+                  <p>
+                    The InstruNET model was evaluated against two baselines: a
+                    shallow feedforward neural network (Baseline) and a
+                    pre-trained audio classification model (YAMNet). As shown in
+                    Table 2, InstruNET achieved the highest scores across all
+                    weighted evaluation metrics—accuracy, F1-score, precision,
+                    and recall—highlighting its superior performance in
+                    multi-label instrument classification.
+                  </p>
+
+                  <table>
+                    <caption>
+                      <strong>Table 2:</strong>
+                      Comparison of weighted metrics across Shallow Feedforward
+                      Neural Network (baseline), YAMNet (pre-trained), and
+                      InstruNET.
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th>Metric</th>
+                        <th>Baseline</th>
+                        <th>YAMNet</th>
+                        <th><strong>InstruNET</strong></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Accuracy</td>
+                        <td>58.9%</td>
+                        <td>72.1%</td>
+                        <td><strong>82.1%</strong></td>
+                      </tr>
+                      <tr>
+                        <td>F1-score</td>
+                        <td>0.772</td>
+                        <td>0.776</td>
+                        <td><strong>0.832</strong></td>
+                      </tr>
+                      <tr>
+                        <td>Precision</td>
+                        <td>0.779</td>
+                        <td>0.738</td>
+                        <td><strong>0.848</strong></td>
+                      </tr>
+                      <tr>
+                        <td>Recall</td>
+                        <td>0.773</td>
+                        <td>0.731</td>
+                        <td><strong>0.839</strong></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/ Results Section -->
+
+        <!-- Next Steps -->
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <h2 class="title is-3 section-title">Next Steps</h2>
+            <div class="columns is-centered">
+              <div class="column content">
+                <div class="content has-text-justified">
+                  <p>
+                    Ultimately, the project resulted in a model capable of
+                    identifying the instruments in a mixed audio track. As a
+                    result, the next step involves performing source separation
+                    to isolate each identified instrument into distinct audio
+                    files. A promising approach involves using a model similar
+                    to <a href="https://arxiv.org/abs/2211.08553">Demucs</a>, a
+                    state-of-the-art source separation architecture developed by
+                    Facebook AI Research. Demucs employs an encoder-decoder
+                    structure with bidirectional LSTM layers to reconstruct
+                    high-resolution waveforms, and could be extended to include
+                    additional instrument classes from the Slakh dataset.
+                  </p>
+                  <p>
+                    After obtaining separated stems, each instrument's audio can
+                    be transcribed into MIDI format using
+                    <a href="https://arxiv.org/abs/2203.09893">Basic Pitch</a>,
+                    an open-source transcription tool developed by Spotify.
+                    Basic Pitch uses neural networks to convert audio to MIDI
+                    representations. These MIDI files can then be imported into
+                    conventional notation software such as
+                    <a href="https://github.com/musescore/MuseScore"
+                      >MuseScore</a
+                    >
+                    to generate standardized sheet music.
+                  </p>
+                  <p>
+                    This proposed three-stage pipeline—instrument
+                    identification, source separation, and transcription—offers
+                    a promising direction for future development. It will enable
+                    raw mixed-instrument recordings to be transformed into
+                    individual written scores, contributing to the accessibility
+                    of music education and streamlining music production
+                    workflows.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/ Next Steps -->
       </div>
-    </div>
-    <!--/ Animation. -->
+    </section>
 
-
-    <!-- Concurrent Work. -->
-    <!-- <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This website is licensed under a
+                <a
+                  rel="license"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/"
+                  >Creative Commons Attribution-ShareAlike 4.0 International
+                  License</a
+                >.
+              </p>
+              <p>
+                Thank you to Nerfies for the template. Here is the
+                <a href="https://github.com/nerfies/nerfies.github.io"
+                  >source code</a
+                >
+                of this website.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div> -->
-    <!--/ Concurrent Work. -->
-
-  </div>
-</section>
-
-
-
-<footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p> Thank you to Nerfies for the template. Here is the
-             <a href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-</body>
+    </footer>
+  </body>
 </html>
